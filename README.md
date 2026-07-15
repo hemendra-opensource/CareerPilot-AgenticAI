@@ -27,7 +27,7 @@
 
 ---
 
-## 📖 Introduction & System Overview
+## Introduction & System Overview
 
 **CareerPilot AI** is an Agentic AI project that uses multiple specialized AI agents working collaboratively to evaluate resumes, identify skill gaps, generate learning roadmaps, recommend portfolio projects, and prepare users for interviews.
 
@@ -39,7 +39,7 @@ The application operates in two distinct execution modes:
 
 ---
 
-## 📌 Quick Navigation
+## Quick Navigation
 
 - [Features](#-features)
 - [System Architecture](#-system-architecture)
@@ -61,24 +61,24 @@ The application operates in two distinct execution modes:
 
 ---
 
-## ✨ Features
+## Features
 
 The system offers a comprehensive set of features divided into specialized agent-led domains:
 
 | Module / Agent | Core Capability | Recruiter/Hiring Value |
 | :--- | :--- | :--- |
-| **📄 Resume Analyzer** | PyPDF2-based text extraction, structured parsing of work experience/education, and a rule-based ATS completeness scoring engine. | Audits baseline resume formatting and highlights immediately visible profile deficiencies. |
-| **🔍 Skill Gap Analyst** | Deterministic comparison of candidate skills against a target role database containing standard industry competencies. | Quantifies candidate capability mismatch with a precise gap percentage. |
-| **🗺️ Roadmap Strategist** | Automatically generates a customized monthly learning curriculum divided into Beginner, Intermediate, and Advanced stages. | Provides a structured path forward with target timelines for transition. |
-| **🎙️ Interview Coach** | Curates role-specific mock interview sheets (Technical, HR, Scenario Q&A) and computes a comprehensive readiness score. | Simulates real-world interviewer behavior and catches soft/hard skill risks. |
-| **🛠️ Project Mentor** | Recommends targeted capstone and baseline projects dynamically prioritized using a 4-factor composite scoring engine. | Ranks project recommendations by their capability to close the user's specific skill gaps. |
-| **👑 Master Career Agent** | Consolidates all diagnostic outputs. Computes Career Health and Hiring Readiness grades and formulates an actionable action plan. | Formulates a unified executive career strategy. |
-| **📥 PDF Reports** | Generates a styled, multi-page downloadable PDF report using ReportLab. | Recruiters and mentors receive a shareable, easy-to-read candidate profile audit. |
-| **🧠 Shared Memory** | A stateful memory architecture that propagates agent outputs sequentially downstream without redundant LLM calls. | Assures state persistence and consistent advice across the entire user session. |
+| ** Resume Analyzer** | PyPDF2-based text extraction, structured parsing of work experience/education, and a rule-based ATS completeness scoring engine. | Audits baseline resume formatting and highlights immediately visible profile deficiencies. |
+| ** Skill Gap Analyst** | Deterministic comparison of candidate skills against a target role database containing standard industry competencies. | Quantifies candidate capability mismatch with a precise gap percentage. |
+| ** Roadmap Strategist** | Automatically generates a customized monthly learning curriculum divided into Beginner, Intermediate, and Advanced stages. | Provides a structured path forward with target timelines for transition. |
+| ** Interview Coach** | Curates role-specific mock interview sheets (Technical, HR, Scenario Q&A) and computes a comprehensive readiness score. | Simulates real-world interviewer behavior and catches soft/hard skill risks. |
+| ** Project Mentor** | Recommends targeted capstone and baseline projects dynamically prioritized using a 4-factor composite scoring engine. | Ranks project recommendations by their capability to close the user's specific skill gaps. |
+| ** Master Career Agent** | Consolidates all diagnostic outputs. Computes Career Health and Hiring Readiness grades and formulates an actionable action plan. | Formulates a unified executive career strategy. |
+| ** PDF Reports** | Generates a styled, multi-page downloadable PDF report using ReportLab. | Recruiters and mentors receive a shareable, easy-to-read candidate profile audit. |
+| ** Shared Memory** | A stateful memory architecture that propagates agent outputs sequentially downstream without redundant LLM calls. | Assures state persistence and consistent advice across the entire user session. |
 
 ---
 
-## 🗺️ System Architecture
+## System Architecture
 
 Immediately below is the core blueprint mapping out how data moves through the sequential multi-agent workforce to produce a unified career assessment report.
 
@@ -86,11 +86,11 @@ Immediately below is the core blueprint mapping out how data moves through the s
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ---
 
-### 🔄 Working Flow
+### Working Flow
 
 The user journey is structured as a sequential pipeline. The output of each agent feeds directly into the context of the next:
 
@@ -106,7 +106,7 @@ The user journey is structured as a sequential pipeline. The output of each agen
 
 ---
 
-### 💬 Agent Communication
+### Agent Communication
 
 Inter-agent collaboration is structured sequentially to prevent context loss or conflicting recommendations:
 
@@ -116,7 +116,7 @@ Each agent acts as a specialized node. Rather than operating in isolation, downs
 
 ---
 
-### 🧠 Shared Memory Architecture
+### Shared Memory Architecture
 
 To optimize API usage and maintain system consistency, CareerPilot AI implements a stateful memory layer:
 
@@ -128,7 +128,7 @@ To optimize API usage and maintain system consistency, CareerPilot AI implements
 
 ---
 
-### 📐 Decision Engine
+### Decision Engine
 
 The platform features a deterministic decision-making system that runs alongside the LLM service to score the candidate:
 
@@ -146,7 +146,7 @@ $$\text{Composite Score} = 0.4 \times \text{Gap Coverage} + 0.3 \times \text{Dif
 
 ---
 
-### 🧠 LLM Integration Architecture
+### LLM Integration Architecture
 
 CareerPilot AI uses a centralized, rate-limited wrapper model to manage API usage:
 
@@ -160,7 +160,7 @@ To guarantee clean separation of concerns:
 
 ---
 
-### 📄 PDF Report Generation Pipeline
+### PDF Report Generation Pipeline
 
 The final career assessment document is built deterministically without relying on LLM formatting:
 
@@ -173,7 +173,7 @@ The final career assessment document is built deterministically without relying 
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 The application is built using a modern, lightweight, and highly performant Python stack:
 
@@ -190,7 +190,7 @@ The application is built using a modern, lightweight, and highly performant Pyth
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 Below is the repository layout mapping the functional modules:
 
@@ -251,7 +251,7 @@ careerpilot-agentic-ai/
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 Below are placeholders for the interface dashboard views:
 
@@ -264,7 +264,7 @@ Below are placeholders for the interface dashboard views:
 
 ---
 
-## 🚀 Installation & Local Setup
+## Installation & Local Setup
 
 Get CareerPilot AI up and running on your local machine in under 5 minutes:
 
@@ -307,7 +307,7 @@ The application will launch and open in your default browser at `http://localhos
 
 ---
 
-## 📝 Environment Variables Config
+## Environment Variables Config
 
 The project requires the following parameters configured in your `.env` file:
 
@@ -322,7 +322,7 @@ GROQ_MODEL=llama-3.3-70b-versatile
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 We plan to expand the system with the following capabilities:
 *   [ ] **Real-time Job Matching**: Connect with active jobs APIs (LinkedIn, Indeed) to suggest open listings matching the user's updated profile.
@@ -333,7 +333,7 @@ We plan to expand the system with the following capabilities:
 
 ---
 
-## 💼 Resume Project Description
+## Resume Project Description
 
 For your resume, portfolio, or LinkedIn project section, you can use the following ATS-optimized description:
 
@@ -345,7 +345,7 @@ For your resume, portfolio, or LinkedIn project section, you can use the followi
 
 ---
 
-## 🌟 Why This Project Matters
+## Why This Project Matters
 
 Most current AI career tools function as simple single-turn prompt templates. **CareerPilot AI** demonstrates the power of true **Agentic AI Workflow Design**:
 1.  **Task Decomposition**: Complex career analysis is broken down into specialized agents (e.g., separating roadmap generation from interview coaching).
@@ -354,13 +354,13 @@ Most current AI career tools function as simple single-turn prompt templates. **
 
 ---
 
-## ✍️ Author
+## Author
 
 Created and maintained by **Hemendra** and the open-source community.
 
 *   **GitHub**: [@hemendra-opensource](https://github.com/hemendra-opensource)
-*   **LinkedIn**: [Your LinkedIn URL Placeholder]
-*   **Portfolio**: [Your Portfolio URL Placeholder]
+*   **LinkedIn**: [https://www.linkedin.com/in/hemendra-sharma60/]
+*   **Portfolio**: [https://hemendra-sharma.netlify.app/]
 
 ---
 

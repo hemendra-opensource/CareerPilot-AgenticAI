@@ -1,6 +1,14 @@
-# ✈️ CareerPilot AI
+<div align="center">
+  <img src="assets/logo.png" alt="CareerPilot AI Logo" width="180">
+</div>
 
-### *An Agentic AI Multi-Agent Career Mentor System powered by Groq LLM*
+<div align="center">
+
+# CareerPilot AI
+
+### An Agentic AI-powered Multi-Agent Career Mentor System for Resume Analysis, Skill Gap Detection, Career Roadmaps, Interview Preparation, and Personalized Career Intelligence.
+
+</div>
 
 <div align="center">
 
@@ -13,11 +21,17 @@
 
 </div>
 
+<div align="center">
+  <img src="assets/github_banner.png" alt="CareerPilot Banner" width="100%">
+</div>
+
 ---
 
 ## 📖 Introduction & System Overview
 
-**CareerPilot AI** is an advanced, production-grade Multi-Agent Career Mentor System designed to provide highly personalized, end-to-end professional growth guidance. Leveraging a structured team of specialized autonomous agents coordinated by a centralized master agent, the platform automates resume analysis, skill gap auditing, dynamic roadmap generation, mock interview coaching, portfolio project recommendations, and comprehensive career report compiling.
+**CareerPilot AI** is an Agentic AI project that uses multiple specialized AI agents working collaboratively to evaluate resumes, identify skill gaps, generate learning roadmaps, recommend portfolio projects, and prepare users for interviews.
+
+Leveraging a structured team of specialized autonomous agents coordinated by a centralized master agent, the platform automates resume analysis, skill gap auditing, dynamic roadmap generation, mock interview coaching, portfolio project recommendations, and comprehensive career report compiling.
 
 The application operates in two distinct execution modes:
 1. **Manual Mode**: A step-by-step interactive workspace where users can run and refine results stage-by-stage.
@@ -25,11 +39,25 @@ The application operates in two distinct execution modes:
 
 ---
 
-## 🗺️ System Architecture
+## 📌 Quick Navigation
 
-Immediately below is the core blueprint mapping out how data moves through the sequential multi-agent workforce to produce a unified career assessment report.
-
-![System Architecture](assets/System_architecture.png)
+- [Features](#-features)
+- [System Architecture](#-system-architecture)
+- [Working Flow](#-working-flow)
+- [Agent Communication](#-agent-communication)
+- [Shared Memory Architecture](#-shared-memory-architecture)
+- [Decision Engine](#-decision-engine)
+- [LLM Integration Architecture](#-llm-integration-architecture)
+- [PDF Report Generation Pipeline](#-pdf-report-generation-pipeline)
+- [Technology Stack](#-technology-stack)
+- [Project Structure](#-project-structure)
+- [Screenshots](#-screenshots)
+- [Installation & Local Setup](#-installation--local-setup)
+- [Environment Variables Config](#-environment-variables-config)
+- [Future Enhancements](#-future-enhancements)
+- [Resume Project Description](#-resume-project-description)
+- [Why This Project Matters](#-why-this-project-matters)
+- [Author](#-author)
 
 ---
 
@@ -47,6 +75,14 @@ The system offers a comprehensive set of features divided into specialized agent
 | **👑 Master Career Agent** | Consolidates all diagnostic outputs. Computes Career Health and Hiring Readiness grades and formulates an actionable action plan. | Formulates a unified executive career strategy. |
 | **📥 PDF Reports** | Generates a styled, multi-page downloadable PDF report using ReportLab. | Recruiters and mentors receive a shareable, easy-to-read candidate profile audit. |
 | **🧠 Shared Memory** | A stateful memory architecture that propagates agent outputs sequentially downstream without redundant LLM calls. | Assures state persistence and consistent advice across the entire user session. |
+
+---
+
+## 🗺️ System Architecture
+
+Immediately below is the core blueprint mapping out how data moves through the sequential multi-agent workforce to produce a unified career assessment report.
+
+![System Architecture](assets/System_architecture.png)
 
 ---
 
@@ -119,7 +155,7 @@ CareerPilot AI uses a centralized, rate-limited wrapper model to manage API usag
 To guarantee clean separation of concerns:
 1. Agents pass prompts to the `LLMService`.
 2. `LLMService` handles retries, formats schema queries, and routes calls to the `GroqClient`.
-3. `GroqClient` queries the Groq API utilizing the super-fast `llama-3.3-70b-versatile` model.
+3. `GroqClient` queries the Groq API utilising the super-fast `llama-3.3-70b-versatile` model.
 4. Raw outputs are cleaned, parsed to JSON if requested, and returned to the calling agent.
 
 ---

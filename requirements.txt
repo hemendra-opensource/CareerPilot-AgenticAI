@@ -1,5 +1,23 @@
+# CareerPilot AI — Production Requirements
+# Install with: pip install -r requirements.txt
+
+# ── Core Web Framework ─────────────────────────
 streamlit>=1.35.0
+
+# ── Environment & Configuration ────────────────
 python-dotenv>=1.0.1
+
+# ── Groq LLM Integration ───────────────────────
 groq>=0.9.0
+
+# ── Document Parsing ───────────────────────────
 PyPDF2>=3.0.1
 
+# ── PDF Report Generation ──────────────────────
+reportlab>=4.2.0
+
+# ── Agentic AI Orchestration ───────────────────
+# crewai and langchain-core are optional on Python 3.14
+# (binary wheels may fail to compile; the fallback compat layer is used)
+crewai>=0.30.0
+langchain-core>=0.2.0

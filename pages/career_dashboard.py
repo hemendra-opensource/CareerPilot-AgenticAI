@@ -78,6 +78,12 @@ st.markdown("""
 
         .sub-card {
             background-color: #FFFFFF;
+            color: black;
+            border: 1px solid #E9ECEF;
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0
             border: 1px solid #E2E8F0;
             border-radius: 10px;
             padding: 1.2rem;
@@ -145,6 +151,7 @@ st.markdown("""
         .advisor-bullet {
             padding: 0.5rem 0.7rem;
             background-color: #EDF2F7;
+            colo
             border-left: 3px solid #4A5568;
             margin-bottom: 0.4rem;
             border-radius: 0 4px 4px 0;

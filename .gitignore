@@ -1,48 +1,48 @@
-# Byte-compiled / optimized / DLL files
+# .gitignore — CareerPilot AI
+
+# ── Environment & Secrets ─────────────────────
+.env
+*.env.local
+
+# ── Python ────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
 .Python
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
 *.egg-info/
-.installed.cfg
-*.egg
+.eggs/
 
-# Virtual environments
+# ── Virtual Environments ──────────────────────
 venv/
 .venv/
 env/
-.env
 ENV/
-env.bak/
-venv.bak/
 
-# Streamlit config and cache
-.streamlit/
+# ── Generated Reports ─────────────────────────
+reports/
+*.pdf
 
-# Local data & reports
-reports/*
-!reports/.gitkeep
-data/*
-!data/.gitkeep
+# ── Runtime Data ──────────────────────────────
+data/
 
-# OS generated files
+# ── IDE / Editor ──────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
 .DS_Store
 Thumbs.db
+
+# ── Jupyter ───────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Streamlit cache ───────────────────────────
+.streamlit/
+
+# ── Logs ──────────────────────────────────────
+*.log
+logs/

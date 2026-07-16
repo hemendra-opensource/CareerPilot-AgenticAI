@@ -20,7 +20,7 @@ st.markdown("""
         }
 
         .page-title {
-            background: linear-gradient(135deg, #1F1C2C 0%, #928DAB 100%);
+            background: linear-gradient(135deg, #3a3359 0%, #928DAB 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 2.6rem;
@@ -42,6 +42,7 @@ st.markdown("""
             margin-bottom: 1rem;
             border-left: 5px solid #1F1C2C;
             padding-left: 0.6rem;
+            color: #554b82;
         }
 
         .score-box-health {
@@ -365,23 +366,23 @@ if results and results.get("target_role") == target_role:
     with col_7:
         st.markdown("#### 📅 Immediate Actions (Next 7 Days)")
         for item in action_plan["immediate_7_days"]:
-            st.markdown(f'<div class="action-bullet-immediate">⚡ {item}</div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="action-bullet-immediate">⭕ {item}</div>', unsafe_allow_html=True)
             
     with col_30:
         st.markdown("#### 📆 Short-Term Goals (30 Days)")
         for item in action_plan["short_term_30_days"]:
-            st.markdown(f'<div class="action-bullet-short">🏃 {item}</div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="action-bullet-short"> ⚪️ {item}</div>', unsafe_allow_html=True)
 
     col_90, col_365 = st.columns(2)
     with col_90:
         st.markdown("#### 📅 Medium-Term Goals (90 Days)")
         for item in action_plan["medium_term_90_days"]:
-            st.markdown(f'<div class="action-bullet-medium">🎯 {item}</div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="action-bullet-medium">⬜️ {item}</div>', unsafe_allow_html=True)
             
     with col_365:
         st.markdown("#### 📆 Long-Term Goals (6–12 Months)")
         for item in action_plan["long_term_goals"]:
-            st.markdown(f'<div class="action-bullet-long">🏆 {item}</div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="action-bullet-long">🔗 {item}</div>', unsafe_allow_html=True)
 
     st.markdown("---")
 
@@ -393,19 +394,19 @@ if results and results.get("target_role") == target_role:
     
     col_str, col_risk = st.columns(2)
     with col_str:
-        st.markdown("#### 💪 Key Strengths")
+        st.markdown("#### Key Strengths")
         for strength in assessment.get("strengths_assessment", []):
             st.markdown(f'<div class="advisor-bullet">⭐ {strength}</div>', unsafe_allow_html=True)
             
     with col_risk:
-        st.markdown("#### ⚠️ Key Risks & Weaknesses")
+        st.markdown("#### Key Risks & Weaknesses")
         for risk in assessment.get("risks_assessment", []):
             st.markdown(f'<div class="action-bullet-immediate" style="margin-left:0;border-left-width:3px;">🚨 {risk}</div>', unsafe_allow_html=True)
 
     st.markdown("#### 📈 Hiring Outlook")
     st.write(assessment.get("hiring_outlook", ""))
 
-    st.markdown("#### 🚀 Strategic Recommended Next Steps")
+    st.markdown("#### 👉 Strategic Recommended Next Steps")
     for step in assessment.get("recommended_next_steps", []):
         st.markdown(f'<div class="advisor-bullet">✔ {step}</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)

@@ -4,7 +4,7 @@ from utils.role_database import ROLE_DATABASE
 
 st.set_page_config(
     page_title="CareerPilot AI - Agentic Career Advisor",
-    page_icon="🤖",
+    page_icon="🕵🏻",
     layout="wide"
 )
 
@@ -17,7 +17,8 @@ st.markdown("""
         html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
         .page-title {
-            background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+            background: linear-gradient(135deg, #1e4c5e 0%, #203A43 50%, #2C5364 100%);
+            color: transparent;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 2.6rem;
@@ -34,6 +35,7 @@ st.markdown("""
             margin-bottom: 1rem;
             border-left: 5px solid #2C5364;
             padding-left: 0.6rem;
+            color: #2C5364;
         }
 
         .agent-step {
@@ -84,7 +86,7 @@ st.markdown("""
 # ──────────────────────────────────────────────
 # Header
 # ──────────────────────────────────────────────
-st.markdown('<h1 class="page-title">🤖 Agentic Career Advisor</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="page-title">🕵🏻 Agentic Career Advisor</h1>', unsafe_allow_html=True)
 st.markdown(
     '<p class="page-subtitle">Run a fully autonomous multi-agent career pipeline — from resume parsing to final career strategy.</p>',
     unsafe_allow_html=True

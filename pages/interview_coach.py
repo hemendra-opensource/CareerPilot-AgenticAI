@@ -37,7 +37,7 @@ st.markdown("""
         .section-header {
             font-size: 1.3rem;
             font-weight: 600;
-            color: #2D3748;
+            color: #465c82;
             margin-top: 1.5rem;
             margin-bottom: 0.8rem;
             border-left: 4px solid #7F00FF;
@@ -72,6 +72,7 @@ st.markdown("""
         .list-bullet {
             padding: 0.5rem;
             background-color: #F8F9FA;
+            color: #495057;
             border-left: 3px solid #7F00FF;
             margin-bottom: 0.5rem;
             border-radius: 0 4px 4px 0;
@@ -344,7 +345,7 @@ if results and results.get('role') == target_role:
     col_focus, col_mistakes = st.columns(2)
 
     with col_focus:
-        st.markdown("#### 🎯 Key Focus Areas")
+        st.markdown("#### 📍 Key Focus Areas")
         for area in coaching.get('key_focus_areas', []):
             st.markdown(f'<div class="list-bullet">💡 {area}</div>', unsafe_allow_html=True)
 

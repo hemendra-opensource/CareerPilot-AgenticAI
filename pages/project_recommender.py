@@ -37,7 +37,7 @@ st.markdown("""
         .section-header {
             font-size: 1.3rem;
             font-weight: 600;
-            color: #2D3748;
+            color: #133878;
             margin-top: 1.5rem;
             margin-bottom: 0.8rem;
             border-left: 4px solid #00B4DB;
@@ -98,6 +98,7 @@ st.markdown("""
         .phase-item {
             padding: 0.4rem 0.6rem;
             background-color: #F0FFF4;
+            color: #2F855A;
             border-left: 3px solid #38A169;
             margin-bottom: 0.4rem;
             border-radius: 0 4px 4px 0;
@@ -271,7 +272,7 @@ if results and results.get("role") == target_role:
                 st.info(p["description"])
 
                 # Skills Required
-                st.markdown("**✅ Skills Required:**")
+                st.markdown("**❗ Skills Required:**")
                 req_html = " ".join(
                     f'<span class="skill-tag">{s}</span>'
                     for s in p.get("skills_required", [])
@@ -393,7 +394,7 @@ if results and results.get("role") == target_role:
         for win in coaching.get("quick_wins", []):
             st.markdown(f'<div class="list-bullet">🏃 {win}</div>', unsafe_allow_html=True)
 
-    st.markdown("#### 🎯 Long-Term Portfolio Goals")
+    st.markdown("#### 📉 Long-Term Portfolio Goals")
     for goal in coaching.get("long_term_goals", []):
         st.markdown(f'<div class="list-bullet">🏆 {goal}</div>', unsafe_allow_html=True)
 

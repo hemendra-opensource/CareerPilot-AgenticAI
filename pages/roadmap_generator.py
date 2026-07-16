@@ -36,7 +36,7 @@ st.markdown("""
         .section-header {
             font-size: 1.3rem;
             font-weight: 600;
-            color: #2D3748;
+            color: #FF416C;
             margin-top: 1.5rem;
             margin-bottom: 0.8rem;
             border-left: 4px solid #FF416C;

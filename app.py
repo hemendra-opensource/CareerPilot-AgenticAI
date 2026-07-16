@@ -73,7 +73,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # App Sidebar
-st.sidebar.image("https://img.icons8.com/illustrations/external-tribox-isometric-tribox/100/external-career-guidance-isometric-isometric-tribox.png", width=120)
+st.sidebar.image("assets/logo.png", width=120)
+
 st.sidebar.title("CareerPilot AI")
 st.sidebar.markdown("---")
 st.sidebar.subheader("System Configuration")

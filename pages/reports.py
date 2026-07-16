@@ -44,6 +44,7 @@ st.markdown("""
             margin-bottom: 1rem;
             border-left: 5px solid #FF416C;
             padding-left: 0.6rem;
+            color: #FF4B2B;
         }
 
         .meta-card {
